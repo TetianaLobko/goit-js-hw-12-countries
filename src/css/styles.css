@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(rgb(77, 75, 75) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-color: lightgray;
+}
+
+.container {
+  background: lightgray;
+}
+
+input {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.country-item {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.country-card {
+  display: flex;
+}
+
+.country-info {
+  display: flex;
+}
+
+.country-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.country-list {
+  margin-right: 15px;
+  padding-left: 0;
+}
+
+.country-lang {
+  margin-top: 10px;
+}
+
+.title {
+  font-weight: 600;
+}
