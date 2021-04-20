@@ -27,13 +27,19 @@ function onSearchCountry(e) {
 }
 
 function isFetchSucces(countries) {
-  if (countries.length > 10) {
-    error('Too many matches found. Enter more specific query!');
+  if (countries.length === 1) {
+    TPL.renderCardMarkup(countryCardTpl, countries);
   } else if (countries.length <= 10 && countries.length > 1) {
     TPL.renderListMarkup(countriesListTpl, countries);
-  } else if (countries.length === 1) {
-    TPL.renderCardMarkup(countryCardTpl, countries);
+  } else if (countries.length > 10) {
+    error({
+      title: 'Too many matches found. Please enter a more specific query!',
+      delay: 1500,
+    });
   } else {
-    error('Invalid country name. Enter correct query!');
+    error({
+      title: 'Invalid country name. Enter correct query!',
+      delay: 1500,
+    });
   }
 }
